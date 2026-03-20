@@ -1,0 +1,55 @@
+---
+title: The Algotrading Book
+description: Machine Learning for Crypto Markets — 365 chapters, one per day
+template: splash
+hero:
+  tagline: 365 chapters covering the full spectrum of ML methods for cryptocurrency trading. One chapter per day for a year.
+  image:
+    file: ../../../assets/hero.svg
+  actions:
+    - text: Start Reading
+      link: /en/chapters/01-foundations/001-algorithmic-intelligence-intro/
+      icon: right-arrow
+      variant: primary
+    - text: GitHub
+      link: https://github.com/suenot/the-algotrading-book
+      icon: external
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## 23 Thematic Blocks
+
+<CardGrid>
+  <Card title="Foundations" icon="open-book">
+    Chapters 1–24. Crypto data pipelines, feature engineering, classical ML, deep learning basics.
+  </Card>
+  <Card title="Trading Strategies" icon="rocket">
+    Chapters 25–38. Regime detection, stat arb, execution RL, order flow, momentum.
+  </Card>
+  <Card title="Transformers & LLMs" icon="star">
+    Chapters 39–101. All attention variants, LLMs, BERT, NLP, pretraining.
+  </Card>
+  <Card title="Causal & Explainability" icon="magnifier">
+    Chapters 102–146. Meta-learning, transfer, causal inference, SHAP, LIME.
+  </Card>
+  <Card title="Generative Models" icon="puzzle">
+    Chapters 147–218. SSMs, PINNs, VAE, diffusion, flows, contrastive learning.
+  </Card>
+  <Card title="RL & Microstructure" icon="setting">
+    Chapters 219–268. LOB deep learning, all RL algorithms from DQN to MuZero.
+  </Card>
+  <Card title="Uncertainty & GNNs" icon="information">
+    Chapters 269–300. Bayesian methods, graph neural networks, CNN time series.
+  </Card>
+  <Card title="Advanced Topics" icon="laptop">
+    Chapters 301–365. Federated learning, quantum, distillation, NAS, adversarial, frontier.
+  </Card>
+</CardGrid>
+
+## Tech Stack
+
+Every chapter includes working code with:
+- **Bybit API v5** — REST + WebSocket (no Binance, no Zipline)
+- **Python** — PyTorch, scikit-learn, pandas
+- **Rust** — tokio, reqwest, serde

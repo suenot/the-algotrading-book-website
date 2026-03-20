@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="none"/>
+  <!-- Chart lines -->
+  <polyline points="20,220 60,180 100,190 140,130 180,150 220,90 260,110 300,60 340,80 380,40"
+    fill="none" stroke="#00b4d8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="20,240 60,230 100,220 140,200 180,210 220,180 260,170 300,140 340,150 380,120"
+    fill="none" stroke="#90e0ef" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+  <!-- Candlesticks -->
+  <rect x="55" y="165" width="10" height="30" rx="1" fill="#00b4d8" opacity="0.3"/>
+  <rect x="135" y="115" width="10" height="35" rx="1" fill="#00b4d8" opacity="0.3"/>
+  <rect x="215" y="75" width="10" height="40" rx="1" fill="#00b4d8" opacity="0.3"/>
+  <rect x="295" y="45" width="10" height="35" rx="1" fill="#00b4d8" opacity="0.3"/>
+  <!-- Neural net nodes -->
+  <circle cx="200" cy="260" r="4" fill="#00b4d8"/>
+  <circle cx="230" cy="260" r="4" fill="#00b4d8"/>
+  <circle cx="260" cy="260" r="4" fill="#00b4d8"/>
+  <circle cx="215" cy="280" r="4" fill="#90e0ef"/>
+  <circle cx="245" cy="280" r="4" fill="#90e0ef"/>
+  <line x1="200" y1="260" x2="215" y2="280" stroke="#00b4d8" stroke-width="1" opacity="0.5"/>
+  <line x1="200" y1="260" x2="245" y2="280" stroke="#00b4d8" stroke-width="1" opacity="0.5"/>
+  <line x1="230" y1="260" x2="215" y2="280" stroke="#00b4d8" stroke-width="1" opacity="0.5"/>
+  <line x1="230" y1="260" x2="245" y2="280" stroke="#00b4d8" stroke-width="1" opacity="0.5"/>
+  <line x1="260" y1="260" x2="215" y2="280" stroke="#00b4d8" stroke-width="1" opacity="0.5"/>
+  <line x1="260" y1="260" x2="245" y2="280" stroke="#00b4d8" stroke-width="1" opacity="0.5"/>
+</svg>

@@ -1,0 +1,44 @@
+/* Algotrading Book — custom styles */
+
+:root {
+  --sl-color-accent-low: #0d1f2d;
+  --sl-color-accent: #00b4d8;
+  --sl-color-accent-high: #90e0ef;
+}
+
+:root[data-theme='dark'] {
+  --sl-color-accent-low: #002d3f;
+  --sl-color-accent: #00b4d8;
+  --sl-color-accent-high: #caf0f8;
+}
+
+/* Chapter headings */
+.sl-markdown-content h1 {
+  font-size: 1.8rem;
+}
+
+/* Code blocks */
+.sl-markdown-content pre {
+  border-radius: 8px;
+}
+
+/* Math/formula blocks */
+.sl-markdown-content blockquote {
+  border-left: 3px solid var(--sl-color-accent);
+  background: var(--sl-color-bg-sidebar);
+  padding: 0.5rem 1rem;
+  border-radius: 0 4px 4px 0;
+}
+
+/* Table styling */
+.sl-markdown-content table {
+  font-size: 0.9em;
+}
+
+/* Sidebar block labels */
+.group-label {
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}

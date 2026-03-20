@@ -1,0 +1,55 @@
+---
+title: The Algotrading Book
+description: Машинное обучение для крипторынков — 365 глав, одна в день
+template: splash
+hero:
+  tagline: 365 глав, охватывающих полный спектр методов ML для торговли криптовалютами. Одна глава в день на протяжении года.
+  image:
+    file: ../../../assets/hero.svg
+  actions:
+    - text: Начать читать
+      link: /ru/chapters/01-foundations/001-algorithmic-intelligence-intro/
+      icon: right-arrow
+      variant: primary
+    - text: GitHub
+      link: https://github.com/suenot/the-algotrading-book
+      icon: external
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## 23 тематических блока
+
+<CardGrid>
+  <Card title="Основы" icon="open-book">
+    Главы 1–24. Конвейеры крипто-данных, инженерия признаков, классический ML, основы глубокого обучения.
+  </Card>
+  <Card title="Торговые стратегии" icon="rocket">
+    Главы 25–38. Обнаружение режимов, стат. арбитраж, исполнение RL, поток ордеров.
+  </Card>
+  <Card title="Трансформеры и LLM" icon="star">
+    Главы 39–101. Все варианты attention, LLM, BERT, NLP, предобучение.
+  </Card>
+  <Card title="Причинность и объяснимость" icon="magnifier">
+    Главы 102–146. Мета-обучение, трансфер, причинный вывод, SHAP, LIME.
+  </Card>
+  <Card title="Генеративные модели" icon="puzzle">
+    Главы 147–218. SSM, PINN, VAE, диффузия, потоки, контрастное обучение.
+  </Card>
+  <Card title="RL и микроструктура" icon="setting">
+    Главы 219–268. Глубокое обучение LOB, все алгоритмы RL от DQN до MuZero.
+  </Card>
+  <Card title="Неопределённость и GNN" icon="information">
+    Главы 269–300. Байесовские методы, графовые нейронные сети, CNN для рядов.
+  </Card>
+  <Card title="Продвинутые темы" icon="laptop">
+    Главы 301–365. Федеративное обучение, квантовые вычисления, дистилляция, NAS, adversarial.
+  </Card>
+</CardGrid>
+
+## Технологический стек
+
+Каждая глава содержит рабочий код:
+- **Bybit API v5** — REST + WebSocket (без Binance, без Zipline)
+- **Python** — PyTorch, scikit-learn, pandas
+- **Rust** — tokio, reqwest, serde

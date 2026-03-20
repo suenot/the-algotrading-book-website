@@ -1,0 +1,15 @@
+{
+  "name": "algotrading-book-website",
+  "type": "module",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "node sync-content.mjs && astro dev",
+    "build": "node sync-content.mjs && astro build",
+    "preview": "astro preview",
+    "sync": "node sync-content.mjs"
+  },
+  "dependencies": {
+    "astro": "^4.15.0",
+    "@astrojs/starlight": "^0.28.0"
+  }
+}
