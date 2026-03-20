@@ -45,6 +45,9 @@ const sidebar = [
 ];
 
 export default defineConfig({
+  redirects: {
+    '/': '/en/',
+  },
   integrations: [
     starlight({
       title: 'The Algotrading Book',
