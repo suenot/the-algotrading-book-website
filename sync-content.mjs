@@ -68,8 +68,18 @@ function stripFrontmatter(content) {
   return content;
 }
 
-function addFrontmatter(title, content) {
-  return `---\ntitle: "${title.replace(/"/g, '\\"')}"\n---\n\n${stripFrontmatter(content)}`;
+function rewriteImageUrls(content, repoName) {
+  const base = `${GH_RAW}/${repoName}/main`;
+  // Rewrite markdown images: ![alt](relative/path) → ![alt](https://raw...)
+  return content.replace(
+    /!\[([^\]]*)\]\((?!https?:\/\/)([^)]+)\)/g,
+    (_, alt, src) => `![${alt}](${base}/${src.replace(/^\.\//, '')})`
+  );
+}
+
+function addFrontmatter(title, content, repoName) {
+  const body = rewriteImageUrls(stripFrontmatter(content), repoName);
+  return `---\ntitle: "${title.replace(/"/g, '\\"')}"\n---\n\n${body}`;
 }
 
 async function fetchText(url) {
@@ -111,7 +121,7 @@ async function processBatch(batch) {
       if (!content) { results.push({ ok: false }); continue; }
 
       const title = getTitle(content);
-      const final = addFrontmatter(title, content);
+      const final = addFrontmatter(title, content, repo.name);
       const destDir = path.join(DOCS_DIR, lang, 'chapters', blockDir);
       fs.mkdirSync(destDir, { recursive: true });
       fs.writeFileSync(path.join(destDir, `${slug}.md`), final, 'utf-8');
