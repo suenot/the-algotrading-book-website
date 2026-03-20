@@ -28,13 +28,21 @@ const BLOCKS = [
   { label: 'Block 23 — Frontier Methods',        labelRu: 'Блок 23 — Передовые методы',           dir: '23-frontier',             range: [361, 365]},
 ];
 
-function makeSidebar(locale) {
-  return BLOCKS.map(block => ({
-    label: locale === 'ru' ? block.labelRu : block.label,
-    autogenerate: { directory: `${locale}/chapters/${block.dir}` },
+const sidebar = [
+  {
+    label: 'Overview',
+    translations: { ru: 'Введение' },
+    items: [
+      { label: 'About the Book', link: '/', translations: { ru: 'О книге' } },
+    ],
+  },
+  ...BLOCKS.map(block => ({
+    label: block.label,
+    translations: { ru: block.labelRu },
+    autogenerate: { directory: `chapters/${block.dir}` },
     collapsed: true,
-  }));
-}
+  })),
+];
 
 export default defineConfig({
   integrations: [
@@ -60,16 +68,7 @@ export default defineConfig({
           lang: 'ru',
         },
       },
-      sidebar: [
-        {
-          label: 'Overview',
-          translations: { ru: 'Введение' },
-          items: [
-            { label: 'About the Book', link: '/en/', translations: { ru: 'О книге' } },
-          ],
-        },
-        ...makeSidebar('en'),
-      ],
+      sidebar,
       customCss: ['./src/styles/custom.css'],
     }),
   ],
