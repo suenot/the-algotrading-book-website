@@ -9,11 +9,7 @@
     "sync": "node sync-content.mjs"
   },
   "dependencies": {
-    "astro": "^4.15.0",
-    "@astrojs/starlight": "^0.28.0",
-    "zod": "^3.23.0"
-  },
-  "overrides": {
-    "zod": "^3.23.0"
+    "astro": "4.16.19",
+    "@astrojs/starlight": "0.28.6"
   }
 }
