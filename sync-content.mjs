@@ -122,7 +122,7 @@ async function processBatch(batch) {
 
       const title = getTitle(content);
       const final = addFrontmatter(title, content, repo.name);
-      const destDir = path.join(DOCS_DIR, lang, 'chapters', blockDir);
+      const destDir = path.join(DOCS_DIR, lang === 'en' ? '' : lang, 'chapters', blockDir);
       fs.mkdirSync(destDir, { recursive: true });
       fs.writeFileSync(path.join(destDir, `${slug}.md`), final, 'utf-8');
       results.push({ ok: true });

@@ -45,9 +45,6 @@ const sidebar = [
 ];
 
 export default defineConfig({
-  redirects: {
-    '/': '/en/',
-  },
   integrations: [
     starlight({
       title: 'The Algotrading Book',
@@ -60,9 +57,9 @@ export default defineConfig({
       social: {
         github: 'https://github.com/suenot/the-algotrading-book',
       },
-      defaultLocale: 'en',
+      defaultLocale: 'root',
       locales: {
-        en: {
+        root: {
           label: 'English',
           lang: 'en',
         },
