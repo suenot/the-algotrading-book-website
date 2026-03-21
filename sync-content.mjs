@@ -77,8 +77,13 @@ function rewriteImageUrls(content, repoName) {
   );
 }
 
+function stripH1(content) {
+  // Remove the first H1 line (already used as frontmatter title)
+  return content.replace(/^#\s+.+\n+/, '');
+}
+
 function addFrontmatter(title, content, repoName) {
-  const body = rewriteImageUrls(stripFrontmatter(content), repoName);
+  const body = stripH1(rewriteImageUrls(stripFrontmatter(content), repoName));
   return `---\ntitle: "${title.replace(/"/g, '\\"')}"\n---\n\n${body}`;
 }
 
