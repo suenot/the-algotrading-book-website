@@ -45,8 +45,6 @@ const sidebar = [
 ];
 
 export default defineConfig({
-  site: process.env.SITE || 'https://the-algotrading-book-website.vercel.app',
-  base: process.env.BASE || '/',
   integrations: [
     starlight({
       title: 'The Algotrading Book',
