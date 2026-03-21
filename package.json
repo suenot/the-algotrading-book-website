@@ -11,5 +11,8 @@
   "dependencies": {
     "astro": "4.16.19",
     "@astrojs/starlight": "0.28.6"
+  },
+  "overrides": {
+    "@astrojs/sitemap": "3.5.1"
   }
 }
