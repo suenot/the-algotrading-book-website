@@ -47,10 +47,8 @@ const sidebar = [
 ];
 
 export default defineConfig({
-  ...(isGitHubPages && {
-    site: 'https://suenot.github.io',
-    base: '/the-algotrading-book-website',
-  }),
+  site: isGitHubPages ? 'https://suenot.github.io' : 'https://suenot.com',
+  ...(isGitHubPages && { base: '/the-algotrading-book-website' }),
   integrations: [
     starlight({
       title: 'The Algotrading Book',
