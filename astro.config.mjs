@@ -1,6 +1,8 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
+const isGitHubPages = !!process.env.GITHUB_PAGES;
+
 // 23 thematic blocks
 const BLOCKS = [
   { label: 'Block 1 — Foundations',             labelRu: 'Блок 1 — Основы',                    dir: '01-foundations',          range: [1, 24]   },
@@ -45,6 +47,10 @@ const sidebar = [
 ];
 
 export default defineConfig({
+  ...(isGitHubPages && {
+    site: 'https://suenot.github.io',
+    base: '/the-algotrading-book-website',
+  }),
   integrations: [
     starlight({
       title: 'The Algotrading Book',
